@@ -1,7 +1,16 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Form from './components/Form';
 
-const App = () => (
+class App extends Component{
+  getRecipe = (e) => {
+    e.preventDefault();
+    const recipeName = e.target.elements.recipeName.value;
+
+    console.log(recipeName);
+  } 
+  
+  render(){
+    return (
       <div>
         <header>
           <h1>
@@ -9,9 +18,11 @@ const App = () => (
           </h1>
 
         </header>
-        <Form />
+        <Form getRecipe={this.getRecipe}/>
       </div>
     );
+  }
+} 
   
 
 
