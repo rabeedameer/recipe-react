@@ -29,6 +29,9 @@ class App extends Component{
 
         </header>
         <Form getRecipe={this.getRecipe}/>
+        {this.state.recipes.map((recipe)=>{
+          return <p>{recipe.title}</p>
+        })}
       </div>
     );
   }
