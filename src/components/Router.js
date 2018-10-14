@@ -6,10 +6,10 @@ import Recipe from './Recipe';
 
 const Router = () => (
     <BrowserRouter>
-        <switch>
+        <Switch>
           <Route exact path="/" component={App}/>
           <Route path="/recipe/:id" component={Recipe}/>
-        </switch>
+        </Switch>
     </BrowserRouter>
 )
 
