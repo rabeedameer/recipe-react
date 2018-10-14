@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col ,Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 const Recipes = props => (
     <Row>
@@ -14,7 +15,11 @@ const Recipes = props => (
                             <CardTitle>{recipe.title}</CardTitle>
                             <CardSubtitle>Card subtitle</CardSubtitle>
                             <CardText>{recipe.title}</CardText>
-                            <Button>Show Recipe</Button>
+                            <Button>
+                               <Link to={{pathname: `/recipe/${recipe.recipe_id}`}}>
+                               View Recipe 
+                               </Link>
+                            </Button>
                         </CardBody>
                     </Card>
                 </Col>

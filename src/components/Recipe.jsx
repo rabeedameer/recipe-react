@@ -1,11 +1,19 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 
-const Recipe = ()=> (
-    <div>
-        this is a single recipe component
-    </div>
-);
+class Recipe extends Component{
+    state = {
+
+    }
+    
+    render(){
+        return(
+            <div>
+                this is a single recipe component
+            </div>
+        );
+    }
+};
 
 
 
