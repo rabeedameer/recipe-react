@@ -13,11 +13,22 @@ class App extends Component{
     const apiCall =  await fetch(`${baseURL}search?key=${API_KEY}&q=${recipeName}`);
 
     const data = await apiCall.json(); // "this save the result of fetching tha api as json"
-    this.setState({
-      recipes : data.recipes
-    });
-    
+    this.setState(
+      {recipes : data.recipes}
+      );
   } 
+  componentDidMount = () => {
+    const json = localStorage.getItem("recipes");
+    const recipes = JSON.parse(json);
+    this.setState({
+      recipes 
+    });
+  };
+  
+  componentDidUpdate = () => { // set the localStorage which takes just strings
+    const recipes = JSON.stringify(this.state.recipes);
+    localStorage.setItem("recipes", recipes);
+  }
   
   render(){
     return (
