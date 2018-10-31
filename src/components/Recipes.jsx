@@ -16,7 +16,10 @@ const Recipes = props => (
                             <CardSubtitle>Card subtitle</CardSubtitle>
                             <CardText>{recipe.title}</CardText>
                             <Button>
-                               <Link to={{pathname: `/recipe/${recipe.recipe_id}`}}>
+                               <Link to={{
+                                   pathname: `/recipe/${recipe.recipe_id}`,
+                                   state: { recipe: recipe.title}
+                                        }}>
                                View Recipe 
                                </Link>
                             </Button>

@@ -16,7 +16,7 @@ class App extends Component{
     this.setState({
       recipes : data.recipes
     });
-    console.log(this.state.recipes);
+    
   } 
   
   render(){
@@ -37,4 +37,4 @@ class App extends Component{
   
 
 
-export default App;
+export default App ;
